@@ -1,0 +1,29 @@
+from typing import List
+
+
+class Solution:
+    def maximumProfit(self, prices) -> int:
+        res=0
+        for i in range(0,len(prices)-1):
+            if prices[i+1]>prices[i]:
+                res=res+prices[i+1]-prices[i]
+        return res
+            
+        
+        # code here
+
+
+
+#{ 
+ # Driver Code Starts
+#Initial Template for Python 3
+if __name__ == "__main__":
+    t = int(input())
+    for _ in range(t):
+        arr = list(map(int, input().strip().split()))
+        solution = Solution()
+        res = solution.maximumProfit(arr)
+        print(res)
+        print("~")
+
+# } Driver Code Ends
